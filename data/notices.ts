@@ -23,7 +23,7 @@ export const notices: Record<PolicySlug, PolicyNotice> = {
     lead: "This notice explains how personal information is collected and used when you visit this website, contact me, enquire about work, subscribe to updates or otherwise engage with my professional services.",
     summary:
       "I use personal information to respond to relevant enquiries, arrange and deliver agreed work, maintain necessary professional and financial records, send updates where you have opted in, and keep this website secure. I do not sell personal information.",
-    related: ["cookies", "terms", "accessibility", "safeguarding"],
+    related: ["cookies", "terms-of-use", "accessibility", "safeguarding"],
     draftNote:
       "Before publication: replace all TODO text with your actual providers, jurisdictions, transfer safeguards, retention periods, form purposes and operational processes. Review this notice whenever you add or remove a supplier, form, booking process, analytics tool, newsletter platform or service. (The original draft showed this note publicly; it is now dev-only.)",
   },
@@ -33,11 +33,11 @@ export const notices: Record<PolicySlug, PolicyNotice> = {
     lead: "This notice explains how cookies and similar technologies may be used on this website, what they do and how you can manage your choices.",
     summary:
       "Essential technologies may be used to keep the site secure and working. Optional analytics, preferences, embedded content and marketing technologies should be used only in line with the choices available to you.",
-    related: ["privacy", "terms", "accessibility", "booking"],
+    related: ["privacy", "terms-of-use", "accessibility", "booking"],
     draftNote:
       "Before publishing: run a proper cookie audit and replace every TODO. Your published notice, consent banner and actual scripts must match. Do not describe consent, opt-out, analytics minimisation, essential cookies or third-party tools unless they are configured and working as stated. The ICO requires clear, comprehensive information about cookies and their purposes, and consent for non-essential technologies unless a specific exemption applies.",
   },
-  terms: {
+  terms-of-use: {
     eyebrow: "Legal",
     description: "Terms governing use of rjmlaird.co.uk.",
     lead: "These terms explain the rules for using rjmlaird.co.uk, including how website content may be used and the limits that apply to information and external links.",
@@ -53,7 +53,7 @@ export const notices: Record<PolicySlug, PolicyNotice> = {
     lead: "This disclaimer explains the limits that apply to information published on this website, including articles, resources, tools, external links and professional commentary.",
     summary:
       "Content on this website is provided for general information, education and professional context. It is not a substitute for advice tailored to your circumstances, and separate written terms apply if professional services are agreed.",
-    related: ["terms", "privacy", "cookies", "accessibility"],
+    related: ["terms-of-use", "privacy", "cookies", "accessibility"],
     draftNote:
       "Before publishing: review this disclaimer against your actual content, service routes, booking tools, external links, AI use, downloadable resources and contractual arrangements. This is a practical template, not legal advice. Obtain professional legal review where your work involves regulated advice, children, high-risk technical subjects, paid consumer services, significant commercial contracts or sensitive data.",
   },
@@ -64,7 +64,7 @@ export const notices: Record<PolicySlug, PolicyNotice> = {
     lead: "I aim to make this website usable by as many people as possible, including people who use assistive technologies, navigate by keyboard, use magnification or require reduced motion.",
     summary:
       "This website is partially conformant with WCAG 2.2 Level AA. Some content and third-party services have known limitations, listed below. If you meet a barrier, contact me and I will work to provide the information in a format you can use.",
-    related: ["privacy", "cookies", "terms", "contact"],
+    related: ["privacy", "cookies", "terms-of-use", "contact"],
     draftNote:
       "Before publishing: replace every TODO, then check each claim against the live site. In particular confirm that the skip link, reduced-motion support, form error handling, language attributes and 'no JavaScript needed for basic reading' statements are true, and that you have run the automated and screen-reader checks listed under assessment. Remove any limitation row that does not apply. Do not claim more than 'partially conformant' without a documented full assessment. Remove leftover Accessible Astro theme material if present (template notice, theme links, generic footer, sample astronaut image credit). Link this statement from the footer of every page.",
   },

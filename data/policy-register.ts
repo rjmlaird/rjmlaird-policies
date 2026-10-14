@@ -37,10 +37,10 @@ export const policyRegister: readonly PolicyEntry[] = [
     dependsOn: ["site", "cookies"],
   },
   {
-    slug: "terms",
+    slug: "terms-of-use",
     title: "Terms of use",
     route: "/terms-of-use/",
-    contentFile: "content/terms.md",
+    contentFile: "content/terms-of-use.md",
     status: "published",
     version: "0.1.0",
     created: "2026-10-13",
