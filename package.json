@@ -1,0 +1,48 @@
+{
+  "name": "@rjmlaird/policies",
+  "version": "0.1.0",
+  "description": "Legal and policy content, registers and schemas for the rjmlaird.co.uk web estate. Imported by rjmlaird-master.",
+  "private": true,
+  "type": "module",
+  "license": "UNLICENSED",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./site": "./data/site.ts",
+    "./register": "./data/policy-register.ts",
+    "./processors": "./data/processors.ts",
+    "./cookies": "./data/cookies.ts",
+    "./retention": "./data/retention.ts",
+    "./notices": "./data/notices.ts",
+    "./schemas/*": "./schemas/*.ts",
+    "./content/*": "./content/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.ts",
+    "content",
+    "data",
+    "lib",
+    "schemas",
+    "docs",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm run test",
+    "check:publish": "POLICIES_STRICT=1 vitest run"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "gray-matter": "^4.0.3",
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  }
+}
