@@ -3,7 +3,7 @@ import matter from "gray-matter";
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { policyRegister } from "../data/policy-register";
-import { notices, legalLinks } from "../data/notices";
+import { notices, legalLinks, policyLinkKeys } from "../data/notices";
 import {
   PolicyEntrySchema,
   PolicyFrontmatterSchema,
@@ -23,13 +23,23 @@ describe("policy register", () => {
     expect(new Set(routes).size).toBe(routes.length);
   });
 
+  it("every policy belongs to a group, and both groups are used", () => {
+    const groups = new Set(policyRegister.map((p) => p.group));
+    expect([...groups].sort()).toEqual(["client", "public"]);
+  });
+
+  it("policyLinkKeys cover every slug with unique keys", () => {
+    const keys = policySlugs.map((s) => policyLinkKeys[s]);
+    expect(new Set(keys).size).toBe(keys.length);
+  });
+
   it.each(policyRegister.map((p) => [p.slug, p] as const))("%s entry matches the schema", (_s, entry) => {
     expect(PolicyEntrySchema.safeParse(entry).success).toBe(true);
   });
 
   it("every policy route is in legalLinks with the same href", () => {
     for (const p of policyRegister) {
-      expect(legalLinks[p.slug].href).toBe(p.route);
+      expect(legalLinks[policyLinkKeys[p.slug]].href).toBe(p.route);
     }
   });
 });

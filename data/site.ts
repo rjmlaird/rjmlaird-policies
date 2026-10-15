@@ -80,6 +80,60 @@ export const site = {
     ].join("\n"),
   },
 
+  /** Values referenced by content/security.md. */
+  security: {
+    acknowledgementTarget: "5 working days",
+    triageTarget: "10 working days",
+    encryptedReporting: todo(
+      "if you support encrypted reporting, publish a PGP key or secure reporting form and describe it here; otherwise write 'Encrypted reporting is not currently offered' and say how to arrange a secure transfer",
+    ),
+  },
+
+  /** Values referenced by content/safeguarding.md and content/tutoring.md. */
+  safeguarding: {
+    leadName: todo("name of the designated safeguarding lead"),
+    leadContact: todo("how to reach the safeguarding lead, for example an email address"),
+    checksStatement: todo(
+      "state your actual DBS check status and level and the date, or write that checks are available on request; do not claim checks you do not hold",
+    ),
+    trainingStatement: todo(
+      "state the safeguarding training you have actually completed, the provider and the date",
+    ),
+    recordsRetention: todo("how long safeguarding records are kept, consistent with the retention register"),
+  },
+
+  /** Values referenced by content/complaints.md. */
+  complaints: {
+    acknowledgementDays: todo("business days to acknowledge a complaint, for example 3"),
+    responseDays: todo("business days to give a full response, for example 15"),
+    adrStatement: todo(
+      "name an alternative dispute resolution body if you will use one for consumer complaints, or write that you do not currently use one",
+    ),
+  },
+
+  /**
+   * Commercial terms referenced by content/termsofservice.md, cancellation.md, payments.md and
+   * tutoring.md. Every value here is a business decision: set only terms you will actually apply
+   * and be able to evidence.
+   */
+  commercial: {
+    rescheduleNotice: todo("minimum notice to reschedule a one-to-one session or call without charge, for example 24 hours"),
+    cancellationNotice: todo("minimum notice to cancel a one-to-one session or call for a full refund, for example 48 hours"),
+    lateCancellationCharge: todo("what is charged when a client cancels inside the notice period, for example 50% or 100% of the session fee"),
+    noShowCharge: todo("what is charged for a no-show, for example 100% of the session fee"),
+    lateArrivalWait: todo("how long I wait for a late client before treating the session as a no-show, for example 15 minutes"),
+    groupCancellationNotice: todo("minimum notice to cancel or reschedule a workshop, talk or group booking, for example 14 days"),
+    groupLateCancellationCharge: todo("what is charged when a workshop, talk or group booking is cancelled inside that notice period, for example the deposit or 50% of the fee"),
+    depositTerms: todo("deposit required to secure a larger booking or commission, for example 25% or 50% of the fee, or remove the deposit section"),
+    invoiceTermsDays: todo("invoice payment term in days, for example 14"),
+    vatStatement: todo("state whether you are VAT-registered and whether quoted fees include or exclude VAT"),
+    refundDecisionDays: todo("business days to respond to a refund request, for example 5"),
+    refundPaymentDays: todo("business days to return an approved refund to the original payment method, for example 10"),
+    liabilityCap: todo("limit on liability to business clients, for example the fees paid for the affected services in the previous 12 months; have this reviewed by a solicitor"),
+    apiLimits: todo("state the actual API rate limits and usage allowances, or delete the API section if no API is offered"),
+    terminationNotice: todo("notice either side must give to end an ongoing engagement, for example 30 days"),
+  },
+
   /**
    * Keep values that are not yet factually verified as explicit TODOs. This
    * causes `npm run check:publish` to fail until the policy is ready to publish.

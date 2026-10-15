@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { policyRegister } from "../data/policy-register";
+import { legalLinks, policyLinkKeys } from "../data/notices";
 import {
   INCLUDE_NAMES,
   findTodos,
@@ -76,6 +77,15 @@ describe("site accessibility configuration", () => {
   });
 });
 
+describe("policy register routes", () => {
+  it("matches each policy route to its legal-link entry", () => {
+    for (const policy of policyRegister) {
+      const linkKey = policyLinkKeys[policy.slug];
+
+      expect(legalLinks[linkKey].href).toBe(policy.route);
+    }
+  });
+});
 
 describe.each(policyRegister.map((entry) => [entry.slug, entry] as const))(
   "%s",
@@ -121,7 +131,10 @@ describe.each(policyRegister.map((entry) => [entry.slug, entry] as const))(
 );
 
 describe("site configuration", () => {
-  it.skipIf(!STRICT)("strict publishing check: site configuration has no TODOs", () => {
-    expect(JSON.stringify(site)).not.toMatch(/\\[\\[TODO:[^\\]]+\]\]/);
-  });
+  it.skipIf(!STRICT)(
+    "strict publishing check: site configuration has no TODOs",
+    () => {
+      expect(JSON.stringify(site)).not.toMatch(/\\[\\[TODO:[^\\]]+\]\]/);
+    },
+  );
 });

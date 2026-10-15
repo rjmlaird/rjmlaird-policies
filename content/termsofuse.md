@@ -1,5 +1,5 @@
 ---
-slug: terms-of-use
+slug: termsofuse
 title: Terms of use
 ---
 

@@ -1,7 +1,29 @@
 import { z } from "zod";
 
 /** Every policy this package owns. Add a slug here first, then a register entry, notice and content file. */
-export const policySlugs = ["privacy", "cookies", "terms", "disclaimer", "accessibility"] as const;
+export const policySlugs = [
+  // Public core
+  "privacy",
+  "cookies",
+  "termsofuse",
+  "disclaimer",
+  "accessibility",
+  "security",
+  "safeguarding",
+  "complaints",
+  // Client and commercial
+  "termsofservice",
+  "cancellation",
+  "payments",
+  "tutoring",
+  "mediaconsent",
+  "acceptableuse",
+] as const;
+
+/** public = applies to anyone using the site; client = applies when someone books, pays or commissions work. */
+export const policyGroups = ["public", "client"] as const;
+export const PolicyGroupSchema = z.enum(policyGroups);
+export type PolicyGroup = z.infer<typeof PolicyGroupSchema>;
 
 export const PolicySlugSchema = z.enum(policySlugs);
 export type PolicySlug = z.infer<typeof PolicySlugSchema>;
@@ -22,6 +44,7 @@ export type RegisterDependency = z.infer<typeof RegisterDependencySchema>;
 export const PolicyEntrySchema = z
   .object({
     slug: PolicySlugSchema,
+    group: PolicyGroupSchema,
     title: z.string().min(1),
     /** Public route in rjmlaird-master, with leading and trailing slash. */
     route: z.string().regex(/^\/[a-z0-9-]+\/$/, "Expected /route/"),

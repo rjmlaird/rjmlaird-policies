@@ -3,6 +3,30 @@
 All notable changes to this package. Policy text changes bump the policy's own `version` in
 `data/policy-register.ts`; package releases bump `package.json`.
 
+## [0.2.0] - 2026-10-15
+
+### Added
+- Nine policies as drafts: `security` (converted from `security.astro`), `safeguarding`, `complaints`,
+  and the client suite `termsofservice`, `cancellation`, `payments`, `tutoring`, `mediaconsent`,
+  `acceptableuse`. Each has notice copy and a `legalLinks` entry.
+- `group` (`public` | `client`) on every register entry.
+- `site.security`, `site.safeguarding`, `site.complaints` and `site.commercial`: business terms in one
+  place, each an explicit TODO until decided.
+- `lib/policy-content.ts` (`renderPolicy(slug)`), exported as `@rjmlaird/policies/policy-content`.
+
+### Fixed
+- The `termsofuse` rename was half-done: the content frontmatter still said `terms-of-use`, `notices`
+  `related` used a key that does not exist in `legalLinks` (this would have broken `LegalNotice.astro` at
+  runtime), and the disclaimer linked to `/terms-of-use/`. Added `policyLinkKeys` (slug to link key) as the
+  single mapping and pointed both test files at it.
+- Disclaimer bumped to 0.1.1 (link fix); lastUpdated 2026-10-15.
+- README render example no longer relies on a fragile `import.meta.glob` path into `node_modules`.
+- Removed a stray duplicate title at the end of the README.
+
+### Note
+- Route for terms of use is `/termsofuse/` (as set in the register). If `/terms-of-use/` was ever live,
+  add a redirect.
+
 ## [0.1.0] - 2026-10-14
 
 ### Added

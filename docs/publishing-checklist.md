@@ -22,3 +22,18 @@ A policy moves `draft` → `review` → `published` by editing `status` in `data
 10. **Tell people if it matters.** If a change materially affects how personal information is used or
     optional cookies, update the banner/preference centre first and notify affected people as your notice
     promises.
+
+## Publishing the client suite
+
+`termsofservice`, `cancellation`, `payments` and `tutoring` link to each other, so publish them in the
+same release. After they are live:
+
+1. Add links to them from the published terms of use ("Services and bookings") and the disclaimer. That is
+   a text change: bump their `version` and `lastUpdated`.
+2. Link them from the booking portal and the Stripe checkout and confirmation emails.
+3. Keep a record of which version of each a client accepted.
+
+## Changing a route
+
+If a policy's `route` changes, add a redirect from the old URL and update any hard-coded links in
+rjmlaird-master. `npm test` checks every internal link in the content against the register.

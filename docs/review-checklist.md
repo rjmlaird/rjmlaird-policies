@@ -40,6 +40,23 @@ CHANGELOG line.
 - **Accessibility:** each feature claimed is true on the live site; known-limitations rows match reality;
   last-tested date and tested combinations are real; conformance claim is no stronger than the evidence.
 
+## Client and public policies added in 0.2.0
+
+- **Terms of service:** acceptance method recorded; liability cap and IP position reviewed by a solicitor;
+  business vs consumer wording is right for who you actually sell to; AI-tools paragraph is true.
+- **Booking and cancellation:** every notice period and charge in `site.commercial` matches your booking
+  tool's reminders, rescheduling links and Stripe checkout text; the consumer 14-day section is confirmed
+  by a legal adviser and the booking flow collects the express request to start early.
+- **Payments:** payment methods, VAT position, deposit and late-payment terms are real; refund timings
+  match what your payment provider does.
+- **Tutoring:** age ranges, platform and parent/carer arrangements are real; consistent with safeguarding.
+- **Safeguarding:** lead named, DBS and training statements true and dated (or removed), reviewed by
+  someone qualified before working with children.
+- **Media consent:** you know whether you record; a consent mechanism exists and consents are recorded.
+- **Acceptable use:** delete sections for services you do not run; API limits and content licence set.
+- **Complaints and security:** response times you can meet; security inbox monitored.
+- [ ] The same figure never appears in prose and in `site.commercial` with different values.
+
 ## Cross-checks
 
 - [ ] Every link in the policies works, including the safeguarding page referenced by the privacy notice.

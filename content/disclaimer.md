@@ -7,7 +7,7 @@ title: Website disclaimer
 
 This disclaimer applies to {{site.siteUrl | link}}, including its pages, articles, resources, downloads, tools, media, links and other material made available through the site.
 
-It should be read alongside the [terms of use](/terms-of-use/), [privacy notice](/privacy/) and [cookie notice](/cookies/).
+It should be read alongside the [terms of use](/termsofuse/), [privacy notice](/privacy/) and [cookie notice](/cookies/).
 
 In this disclaimer, “I”, “me” and “my” mean **{{site.controllerName}}**. “You” means anyone using, viewing, sharing, relying on or otherwise interacting with this website and its content.
 
@@ -121,7 +121,7 @@ You must not copy, reproduce, republish, adapt, translate, distribute, sell, lic
 
 This includes using website content to train, fine-tune, benchmark, evaluate or develop artificial-intelligence or machine-learning systems, except where expressly permitted by applicable law or agreed in writing.
 
-See the [terms of use](/terms-of-use/) for further information about intellectual property and permission requests.
+See the [terms of use](/termsofuse/) for further information about intellectual property and permission requests.
 
 ## Changes to this disclaimer
 
