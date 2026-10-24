@@ -1,13 +1,22 @@
 ---
-slug: aiuse
-title: AI use policy
+slug: "aiuse"
+group: "public"
+title: "AI use policy"
+route: "/aiuse/"
+status: "draft"
+version: "0.1.0"
+created: "2026-10-24"
+lastUpdated: "2026-10-24"
+lastReviewed: null
+reviewCadenceMonths: 12
+dependsOn: ["site"]
 ---
 
 ## Overview
 
 This policy explains how **{{site.controllerName}}** uses artificial-intelligence (AI) tools in research, writing, code, design, teaching and client work, and the limits I set on that use.
 
-AI tools can speed up routine work and help me explore ideas. They also make mistakes, can reproduce bias and can put information at risk if they are used carelessly. I use them as assistants, not as authorities. This policy applies with the [[Website disclaimer]], the [[Privacy notice]] and the [[Information security policy]].
+AI tools can speed up routine work and help me explore ideas. They also make mistakes, can reproduce bias and can put information at risk if they are used carelessly. I use them as assistants, not as authorities. This policy applies with the [Website disclaimer](/disclaimer/), the [Privacy notice](/privacy/) and the [Information security policy](/informationsecurity/).
 
 ## Where I use AI
 
@@ -37,7 +46,7 @@ I will not:
 - Enter children’s or learners’ personal information into a general-purpose AI tool
 - Enter special category data or safeguarding information into an AI tool
 - Use client material to train or fine-tune a model without your written agreement
-- Use AI to impersonate a real person, create deceptive images or recordings, or produce content that breaches the [[Acceptable use policy]]
+- Use AI to impersonate a real person, create deceptive images or recordings, or produce content that breaches the [Acceptable use policy](/acceptableuse/)
 - Use AI to write or submit work that a learner is meant to produce for assessment
 
 ## Choosing and checking tools
@@ -50,7 +59,7 @@ Before I use a new AI tool for anything beyond low-risk tasks, I look at:
 - The provider’s security measures, terms and privacy information
 - Whether a business or enterprise plan with stronger data protections is needed
 
-I use accounts with strong passwords and multi-factor authentication, in line with the [[Information security policy]].
+I use accounts with strong passwords and multi-factor authentication, in line with the [Information security policy](/informationsecurity/).
 
 [[TODO: list the AI tools or providers you currently use for client work, or say you will provide the list on request, and state any standing settings such as training opt-outs]]
 
@@ -74,13 +83,13 @@ Learning support is about understanding, not only getting answers.
 - Where a learner uses an AI tool in a session, the parent or carer is responsible for the account and for checking the tool’s age requirements
 - I do not enter learners’ details into AI tools, as set out above
 
-See the [[Tutoring terms]] and the [[Safeguarding policy]].
+See the [Tutoring terms](/tutoring/) and the [Safeguarding policy](/safeguarding/).
 
 ## Tools and data services on this site
 
 [[TODO: say whether any of your tools, APIs or apps use AI or machine-learning features. If they do, say what the feature does, what data is sent to which provider and how it is handled. If they do not, say that none of the tools currently send your inputs to an AI service, and keep this statement accurate]]
 
-Content on this website may have been created, edited or supported with AI tools. The [[Website disclaimer]] explains what that means for how far you can rely on it.
+Content on this website may have been created, edited or supported with AI tools. The [Website disclaimer](/disclaimer/) explains what that means for how far you can rely on it.
 
 ## Environmental impact
 
@@ -88,7 +97,7 @@ AI tools use energy and water. I try to use them where they save meaningful effo
 
 ## Concerns and corrections
 
-If you think something I have published contains an AI-related error, bias or a misleading claim, or you are concerned about how I have used an AI tool, contact {{site.contactEmail | mailto}}. I will review it and correct it where needed. If you would like to make a formal complaint, see the [[Complaints policy]]. Concerns about personal data can also go to {{site.privacyEmail | mailto}}.
+If you think something I have published contains an AI-related error, bias or a misleading claim, or you are concerned about how I have used an AI tool, contact {{site.contactEmail | mailto}}. I will review it and correct it where needed. If you would like to make a formal complaint, see the [Complaints policy](/complaints/). Concerns about personal data can also go to {{site.privacyEmail | mailto}}.
 
 ## Review
 

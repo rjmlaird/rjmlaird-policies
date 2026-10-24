@@ -1,13 +1,22 @@
 ---
-slug: conditionsofsale
-title: Conditions of sale
+slug: "conditionsofsale"
+group: "client"
+title: "Conditions of sale"
+route: "/conditionsofsale/"
+status: "draft"
+version: "0.1.0"
+created: "2026-10-24"
+lastUpdated: "2026-10-24"
+lastReviewed: null
+reviewCadenceMonths: 12
+dependsOn: ["site"]
 ---
 
 ## Overview
 
 These conditions apply when you buy services, digital products, subscriptions or other items from **{{site.controllerName}}** through {{site.siteUrl | link}}, the booking portal at {{site.bookingUrl | link}} or by agreeing a proposal or quote.
 
-They apply with the [[Terms of service]], the [[Booking and cancellation policy]] and the [[Payment policy]]. Some services have their own terms, such as the [[Tutoring terms]] and the [[Subscription terms]]. If a proposal or written agreement says something different about a particular job, the proposal or agreement applies to that job.
+They apply with the [Terms of service](/termsofservice/), the [Booking and cancellation policy](/cancellation/) and the [Payment policy](/payments/). Some services have their own terms, such as the [Tutoring terms](/tutoring/) and the [Subscription terms](/subscriptions/). If a proposal or written agreement says something different about a particular job, the proposal or agreement applies to that job.
 
 Nothing in these conditions limits the rights you have as a consumer under the law.
 
@@ -42,7 +51,7 @@ Prices are in pounds sterling unless I say otherwise. {{site.commercial.vatState
 
 The price you will pay is shown before you confirm an order or accept a proposal. I will not add mandatory charges after that point. Optional extras are explained before you choose them. If I made an obvious pricing error, I will tell you and give you the choice of confirming at the correct price or cancelling with a full refund.
 
-Payment methods, deposits, invoices, late payment and refunds are set out in the [[Payment policy]].
+Payment methods, deposits, invoices, late payment and refunds are set out in the [Payment policy](/payments/).
 
 ## Delivery and performance
 
@@ -66,7 +75,7 @@ If you are a consumer, the law says that:
 - Digital content must be of satisfactory quality, fit for purpose and as described
 - If a service is not performed properly, you may be entitled to have it repeated, or to a price reduction
 
-Please contact {{site.contactEmail | mailto}} as soon as you notice a problem, with your booking or order reference and what has gone wrong. I will respond fairly and promptly. You can also use the [[Complaints policy]].
+Please contact {{site.contactEmail | mailto}} as soon as you notice a problem, with your booking or order reference and what has gone wrong. I will respond fairly and promptly. You can also use the [Complaints policy](/complaints/).
 
 ## Intellectual property
 
@@ -76,7 +85,7 @@ You keep the rights in material you give me, and you give me permission to use i
 
 ## Confidentiality and data protection
 
-I will treat non-public information that you give me as confidential, and use it only to deliver the service, unless the law requires otherwise. Personal data is handled as set out in the [[Privacy notice]] and the [[Data protection policy]].
+I will treat non-public information that you give me as confidential, and use it only to deliver the service, unless the law requires otherwise. Personal data is handled as set out in the [Privacy notice](/privacy/) and the [Data protection policy](/dataprotection/).
 
 ## Liability
 
@@ -87,7 +96,7 @@ Subject to that:
 - For business customers, I am not liable for loss of profit, revenue, goodwill or anticipated savings, or for indirect or consequential loss, and my total liability for any one contract is limited to the fees you paid for the service in question
 - For consumers, I am liable for losses that are a foreseeable result of my breaking the contract or failing to use reasonable care and skill, but not for losses that were not foreseeable
 
-I do not guarantee particular results. See the [[Website disclaimer]].
+I do not guarantee particular results. See the [Website disclaimer](/disclaimer/).
 
 [[TODO: have a legal adviser confirm the liability wording and the cap for business customers, and check it against your professional indemnity or public liability insurance]]
 
@@ -97,7 +106,7 @@ I am not liable for delay or failure caused by events beyond my reasonable contr
 
 ## Ending a contract
 
-Either of us may end a contract if the other commits a serious breach and does not put it right within a reasonable time after being asked. I may also end a contract if you break the [[Acceptable use policy]] or the [[Safeguarding policy]]. If I end a contract for a reason that is not your fault, I will refund fees for services I have not provided.
+Either of us may end a contract if the other commits a serious breach and does not put it right within a reasonable time after being asked. I may also end a contract if you break the [Acceptable use policy](/acceptableuse/) or the [Safeguarding policy](/safeguarding/). If I end a contract for a reason that is not your fault, I will refund fees for services I have not provided.
 
 ## General
 

@@ -1,13 +1,22 @@
 ---
-slug: subscriptions
-title: Subscription terms
+slug: "subscriptions"
+group: "client"
+title: "Subscription terms"
+route: "/subscriptions/"
+status: "draft"
+version: "0.1.0"
+created: "2026-10-24"
+lastUpdated: "2026-10-24"
+lastReviewed: null
+reviewCadenceMonths: 12
+dependsOn: ["site"]
 ---
 
 ## Overview
 
 These terms apply when you sign up for a recurring plan from **{{site.controllerName}}**, such as paid access to a tool, API, resource library, membership or support plan, which renews automatically until you cancel.
 
-They apply with the [[Conditions of sale]], the [[Payment policy]] and the [[Acceptable use policy]]. If the plan page says something different about a particular plan, the plan page applies for that plan.
+They apply with the [Conditions of sale](/conditionsofsale/), the [Payment policy](/payments/) and the [Acceptable use policy](/acceptableuse/). If the plan page says something different about a particular plan, the plan page applies for that plan.
 
 Nothing in these terms limits the rights you have as a consumer under the law.
 
@@ -35,7 +44,7 @@ If a plan starts with a free or discounted trial, I will say how long it lasts a
 ## Billing and renewal
 
 - Your payment method will be charged at the start of each billing period, until you cancel
-- Payments are taken through a third-party payment provider. See the [[Payment policy]]
+- Payments are taken through a third-party payment provider. See the [Payment policy](/payments/)
 - Prices include or exclude VAT as shown at checkout. {{site.commercial.vatStatement}}
 - I will email you a receipt for each payment, and a reminder before a renewal where the law or the plan requires one
 - If a payment fails, I will tell you and try again, and you can update your details. If it still fails, I may pause or end the subscription after giving you notice
@@ -60,25 +69,25 @@ If you are a consumer, you have a legal right to cancel within 14 days of signin
 
 ## Using your plan
 
-Your plan is personal to you, or to the organisation named on it, and you must not share your login or let others use it unless the plan allows more users. You must keep to the [[Acceptable use policy]]. If a plan has usage limits, such as API calls or storage, they are shown on the plan page and I will warn you before you reach them where possible. {{site.commercial.apiLimits}}
+Your plan is personal to you, or to the organisation named on it, and you must not share your login or let others use it unless the plan allows more users. You must keep to the [Acceptable use policy](/acceptableuse/). If a plan has usage limits, such as API calls or storage, they are shown on the plan page and I will warn you before you reach them where possible. {{site.commercial.apiLimits}}
 
 ## Your content and data
 
-You keep the rights in content and data you put into a service. You give me permission to store and process it to provide the service. Personal data is handled as set out in the [[Privacy notice]] and the [[Data protection policy]].
+You keep the rights in content and data you put into a service. You give me permission to store and process it to provide the service. Personal data is handled as set out in the [Privacy notice](/privacy/) and the [Data protection policy](/dataprotection/).
 
-You can export your data from a service while your subscription is active, where the service allows it. After a subscription ends, I will keep your data for a short time so you can rejoin or export it, and then delete it, as set out in the [[Data retention policy]].
+You can export your data from a service while your subscription is active, where the service allows it. After a subscription ends, I will keep your data for a short time so you can rejoin or export it, and then delete it, as set out in the [Data retention policy](/retention/).
 
 [[TODO: state how long you keep data after a subscription ends and how people can export it, and make sure this matches the retention policy]]
 
 ## Service levels and support
 
-Support is available through {{site.contactEmail | mailto}}. Paid services may have service levels set out in the [[Service level agreement]]. Otherwise, I aim to provide the service with reasonable care and skill but I do not promise that it will be uninterrupted or free of errors.
+Support is available through {{site.contactEmail | mailto}}. Paid services may have service levels set out in the [Service level agreement](/sla/). Otherwise, I aim to provide the service with reasonable care and skill but I do not promise that it will be uninterrupted or free of errors.
 
 ## Suspension and ending
 
 I may suspend or end a subscription if:
 
-- You break these terms or the [[Acceptable use policy]], or put the service or others at risk
+- You break these terms or the [Acceptable use policy](/acceptableuse/), or put the service or others at risk
 - A payment remains unpaid after reminders
 - I need to stop offering the plan or the service. I will give you at least 30 days’ notice where possible, and refund any amount you have paid for the period after the plan ends
 
@@ -86,11 +95,11 @@ If I end your subscription for a reason that is not your fault, I will refund th
 
 ## Liability
 
-Nothing in these terms limits or excludes liability that cannot lawfully be limited, including for death or personal injury caused by negligence, or for fraud. Other limits on liability are set out in the [[Conditions of sale]].
+Nothing in these terms limits or excludes liability that cannot lawfully be limited, including for death or personal injury caused by negligence, or for fraud. Other limits on liability are set out in the [Conditions of sale](/conditionsofsale/).
 
 ## Problems and complaints
 
-If something goes wrong, contact {{site.contactEmail | mailto}} and I will put it right where I can. You can also use the [[Complaints policy]].
+If something goes wrong, contact {{site.contactEmail | mailto}} and I will put it right where I can. You can also use the [Complaints policy](/complaints/).
 
 ## Changes to these terms
 

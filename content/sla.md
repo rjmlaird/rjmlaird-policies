@@ -1,13 +1,22 @@
 ---
-slug: sla
-title: Service level agreement
+slug: "sla"
+group: "client"
+title: "Service level agreement"
+route: "/sla/"
+status: "draft"
+version: "0.1.0"
+created: "2026-10-24"
+lastUpdated: "2026-10-24"
+lastReviewed: null
+reviewCadenceMonths: 12
+dependsOn: ["site"]
 ---
 
 ## Overview
 
 This agreement sets out the service levels that **{{site.controllerName}}** aims to meet for paid, ongoing digital services, such as hosted websites, managed tools, APIs and support arrangements, that a client has agreed to in a proposal or contract.
 
-It applies with the [[Conditions of sale]], the [[Payment policy]] and the [[Information security policy]]. If the proposal or contract sets different service levels for a particular service, those apply instead.
+It applies with the [Conditions of sale](/conditionsofsale/), the [Payment policy](/payments/) and the [Information security policy](/informationsecurity/). If the proposal or contract sets different service levels for a particular service, those apply instead.
 
 ## What this does and does not cover
 
@@ -15,7 +24,7 @@ It applies with the [[Conditions of sale]], the [[Payment policy]] and the [[Inf
 
 **It does not cover:**
 
-- Free tools, calculators, demos, experiments and public APIs, which are provided as they are, without any guaranteed availability or support. Fair-use rules are in the [[Acceptable use policy]]
+- Free tools, calculators, demos, experiments and public APIs, which are provided as they are, without any guaranteed availability or support. Fair-use rules are in the [Acceptable use policy](/acceptableuse/)
 - Work on a project basis, such as a one-off site build, which is governed by its proposal
 - Services run by other organisations, such as hosting platforms, domain registrars, payment providers or social networks, although I will help you to deal with them
 
@@ -43,7 +52,7 @@ Unavailability is time when the service is not working for reasons within my rea
 - Problems caused by you, your users, your equipment, your own network or your own content, code or configuration
 - Failure or restriction of a third party, such as a hosting or DNS provider, outside my reasonable control
 - Attacks and events beyond my reasonable control, although I will work to reduce their effects
-- Suspension of the service under the contract, for example for non-payment or breach of the [[Acceptable use policy]]
+- Suspension of the service under the contract, for example for non-payment or breach of the [Acceptable use policy](/acceptableuse/)
 - Beta, preview or trial features that I have labelled as such
 
 ## Maintenance
@@ -71,11 +80,11 @@ I will keep you updated while I work on an incident, tell you when it is resolve
 
 ## Security incidents
 
-If there is a security incident that affects your service or data, I will follow the process in the [[Information security policy]], including telling you without undue delay and, where required, reporting a personal data breach to the Information Commissioner’s Office within 72 hours. To report a vulnerability, see the [[Security notice]].
+If there is a security incident that affects your service or data, I will follow the process in the [Information security policy](/informationsecurity/), including telling you without undue delay and, where required, reporting a personal data breach to the Information Commissioner’s Office within 72 hours. To report a vulnerability, see the [Security notice](/security/).
 
 ## Backups and recovery
 
-Backups are made and tested as set out in the [[Information security policy]]. [[TODO: state recovery targets that you can actually meet for paid services, such as how often backups are taken, how long they are kept, and the time within which you aim to restore a service, or delete this section if you do not offer them]]
+Backups are made and tested as set out in the [Information security policy](/informationsecurity/). [[TODO: state recovery targets that you can actually meet for paid services, such as how often backups are taken, how long they are kept, and the time within which you aim to restore a service, or delete this section if you do not offer them]]
 
 ## Your responsibilities
 
@@ -85,7 +94,7 @@ To receive the service levels in this agreement, you agree to:
 - Report problems through the support route above, rather than through informal channels
 - Give me the access, information and cooperation I reasonably need
 - Keep your own accounts, credentials and users secure
-- Keep to the [[Acceptable use policy]] and any usage limits that apply
+- Keep to the [Acceptable use policy](/acceptableuse/) and any usage limits that apply
 
 ## Remedies for missing the target
 
@@ -103,7 +112,7 @@ I will review service levels with you at least once a year if the service is ong
 
 ## Complaints
 
-If you are unhappy with the service you have received, raise it with {{site.contactEmail | mailto}} or follow the [[Complaints policy]].
+If you are unhappy with the service you have received, raise it with {{site.contactEmail | mailto}} or follow the [Complaints policy](/complaints/).
 
 ## Contact
 

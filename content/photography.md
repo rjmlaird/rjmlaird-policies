@@ -1,13 +1,22 @@
 ---
-slug: mediaconsent
-title: Photography and media consent policy
+slug: "photography"
+group: "public"
+title: "Photography and video policy"
+route: "/photography/"
+status: "draft"
+version: "0.1.0"
+created: "2026-10-24"
+lastUpdated: "2026-10-24"
+lastReviewed: null
+reviewCadenceMonths: 12
+dependsOn: ["site"]
 ---
 
 ## Overview
 
 This policy explains when **{{site.controllerName}}** takes, records, uses and shares photographs, video and audio, and how consent works.
 
-It applies to events, talks, workshops, tutoring and mentoring sessions, online meetings, and images collected for this website, social media and other publicity. It applies with the [[Privacy notice]], the [[Data protection policy]] and the [[Safeguarding policy]].
+It applies to events, talks, workshops, tutoring and mentoring sessions, online meetings, and images collected for this website, social media and other publicity. It applies with the [Privacy notice](/privacy/), the [Data protection policy](/dataprotection/) and the [Safeguarding policy](/safeguarding/).
 
 A photograph, video or voice recording of an identifiable person is personal data. I handle it with care and only where I have a lawful basis.
 
@@ -41,7 +50,7 @@ Extra care applies to anyone under 18.
 - I do not use images of children for anything other than the stated purpose
 - Parents and carers should not photograph or record other people’s children at events or online sessions unless the organiser has said it is allowed
 
-If I have a safeguarding concern about an image or recording, I will follow the [[Safeguarding policy]].
+If I have a safeguarding concern about an image or recording, I will follow the [Safeguarding policy](/safeguarding/).
 
 ## Using and sharing media
 
@@ -49,10 +58,10 @@ I may use agreed media on this website, on social media, in newsletters, reports
 
 - Use images fairly and respectfully, and not in a misleading way
 - Credit photographers where required
-- Store media securely, in line with the [[Information security policy]]
-- Keep media only as long as needed for the purpose, as set out in the [[Data retention policy]]
+- Store media securely, in line with the [Information security policy](/informationsecurity/)
+- Keep media only as long as needed for the purpose, as set out in the [Data retention policy](/retention/)
 
-I do not sell images of identifiable people, and I do not allow anyone to use them to train AI or facial-recognition systems. I do not use AI tools to alter images of identifiable people in a way that misrepresents them. See the [[AI use policy]].
+I do not sell images of identifiable people, and I do not allow anyone to use them to train AI or facial-recognition systems. I do not use AI tools to alter images of identifiable people in a way that misrepresents them. See the [AI use policy](/aiuse/).
 
 ## Third-party photographers
 
@@ -68,7 +77,7 @@ If you attend one of my events, you can:
 
 ## Your rights
 
-Your rights over personal data, including access, deletion and objection, apply to images and recordings. See the [[Data protection policy]]. To make a request, contact {{site.privacyEmail | mailto}}. If you are not satisfied, you can use the [[Complaints policy]], or complain to the Information Commissioner’s Office.
+Your rights over personal data, including access, deletion and objection, apply to images and recordings. See the [Data protection policy](/dataprotection/). To make a request, contact {{site.privacyEmail | mailto}}. If you are not satisfied, you can use the [Complaints policy](/complaints/), or complain to the Information Commissioner’s Office.
 
 ## Copyright and use by others
 

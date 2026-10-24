@@ -33,6 +33,14 @@ rjmlaird-policies/
 | client | `tutoring` | `/tutoring/` | draft |
 | client | `mediaconsent` | `/mediaconsent/` | draft |
 | client | `acceptableuse` | `/acceptableuse/` | draft |
+| public | `aiuse` | `/aiuse/` | draft |
+| public | `dataprotection` | `/dataprotection/` | draft |
+| public | `retention` | `/retention/` | draft |
+| public | `informationsecurity` | `/informationsecurity/` | draft |
+| public | `photography` | `/photography/` | draft |
+| client | `conditionsofsale` | `/conditionsofsale/` | draft |
+| client | `subscriptions` | `/subscriptions/` | draft |
+| client | `sla` | `/sla/` | draft |
 
 `public` policies apply to anyone using the site. `client` policies apply when someone books, pays or
 commissions work. `data/policy-register.ts` is the source of truth for status; keep this table in step.

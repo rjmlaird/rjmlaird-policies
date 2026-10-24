@@ -3,6 +3,25 @@
 All notable changes to this package. Policy text changes bump the policy's own `version` in
 `data/policy-register.ts`; package releases bump `package.json`.
 
+## [0.3.0] - 2026-10-24
+
+### Added
+- Eight more draft policies: `aiuse`, `dataprotection`, `retention`, `informationsecurity`, `photography`,
+  `conditionsofsale`, `subscriptions`, `sla`, each with notice copy and a `legalLinks` entry.
+- `site.dataProtection` and `site.sla` (explicit TODOs until decided).
+
+### Changed
+- Frontmatter in `content/*.md` is now the source of truth for each register entry, parsed with the `yaml`
+  package and validated by `PolicyFrontmatterSchema`. `contentFile` is derived from the filename
+  (`content/<slug>.md`); other filenames are ignored by the register.
+- `termsofservice` set back to `draft` (it had unresolved TODOs and no review).
+
+### Fixed
+- Register glob path (`../content/*.md`) and YAML parsing (trailing commas, indented keys, `null,`).
+- `accessibility`: feedback-routes and tested-combinations lists now render as lists.
+- Imported files used `[[Policy name]]` cross-references, which render literally; now real links.
+- `photography` overlaps `mediaconsent`; decide whether to merge them.
+
 ## [0.2.0] - 2026-10-15
 
 ### Added

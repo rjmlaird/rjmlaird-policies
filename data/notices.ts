@@ -18,6 +18,14 @@ export const legalLinks = {
   acceptableuse: { href: "/acceptableuse/", label: "Acceptable use policy" },
   securityTxt: { href: "/.well-known/security.txt", label: "security.txt" },
   safeguarding: { href: "/safeguarding/", label: "Safeguarding policy" },
+  aiuse: { href: "/aiuse/", label: "AI use policy" },
+  dataprotection: { href: "/dataprotection/", label: "Data protection policy" },
+  retention: { href: "/retention/", label: "Data retention policy" },
+  informationsecurity: { href: "/informationsecurity/", label: "Information security policy" },
+  photography: { href: "/photography/", label: "Photography and video policy" },
+  conditionsofsale: { href: "/conditionsofsale/", label: "Conditions of sale" },
+  subscriptions: { href: "/subscriptions/", label: "Subscription terms" },
+  sla: { href: "/sla/", label: "Service level agreement" },
   contact: { href: "/contact/", label: "Contact" }, // CONFIRM route
   booking: { href: site.bookingUrl, label: "Booking portal" },
 } as const;
@@ -42,6 +50,14 @@ export const policyLinkKeys = {
   tutoring: "tutoring",
   mediaconsent: "mediaconsent",
   acceptableuse: "acceptableuse",
+  aiuse: "aiuse",
+  dataprotection: "dataprotection",
+  retention: "retention",
+  informationsecurity: "informationsecurity",
+  photography: "photography",
+  conditionsofsale: "conditionsofsale",
+  subscriptions: "subscriptions",
+  sla: "sla",
 } as const satisfies Record<PolicySlug, LegalLinkKey>;
 
 export const notices: Record<PolicySlug, PolicyNotice> = {
@@ -185,5 +201,85 @@ export const notices: Record<PolicySlug, PolicyNotice> = {
     related: ["terms", "security", "privacy", "complaints"],
     draftNote:
       "Before publishing: confirm which of these services actually exist (submissions, member areas, client portals, APIs, tools) and delete the sections for those that do not. Set real API limits and a real content-licence position. Make sure a working reporting route exists.",
+  },
+  aiuse: {
+    eyebrow: "Legal",
+    description: "How AI tools are used in research, writing, code, design, teaching and client work, and the limits that apply.",
+    lead: "This policy explains how I use artificial-intelligence tools, what I will not do with them, and how I check their output.",
+    summary:
+      "I use AI tools as assistants, not authorities. A person remains responsible for everything I publish or deliver, and I do not put confidential or personal information into tools that are not suitable for it.",
+    related: ["privacy", "informationsecurity", "dataprotection", "disclaimer"],
+    draftNote:
+      "Before publishing: list the AI tools you actually use for client work (or say the list is available on request), confirm any training opt-outs, and say whether the tools on this site use AI features. Keep every statement accurate.",
+  },
+  dataprotection: {
+    eyebrow: "Legal",
+    description: "How UK GDPR and the Data Protection Act 2018 are met in practice, including rights, breaches and accountability.",
+    lead: "This policy explains how I meet my obligations under UK data-protection law and the standards I hold myself to when handling personal data.",
+    summary:
+      "The privacy notice says what data I collect and why. This policy describes how I look after it: lawful bases, rights requests, suppliers, risk assessment, breach handling and records.",
+    related: ["privacy", "retention", "informationsecurity", "complaints"],
+    draftNote:
+      "Before publishing: confirm the ICO registration or exemption in site.dataProtection, add or link your current processors, and check the lawful bases against the privacy notice.",
+  },
+  retention: {
+    eyebrow: "Legal",
+    description: "How long personal data and other records are kept, and how they are deleted or anonymised.",
+    lead: "This policy explains how long I keep personal data and other records, how they are reviewed, and how they are deleted or anonymised.",
+    summary:
+      "I keep personal data only as long as it is needed, or as long as the law requires. The retention schedule sets each period and the reason for it.",
+    related: ["privacy", "dataprotection", "informationsecurity", "mediaconsent"],
+    draftNote:
+      "Before publishing: review every period in the schedule with your accountant and a legal adviser, and make sure it matches the privacy notice and the safeguarding records setting.",
+  },
+  informationsecurity: {
+    eyebrow: "Legal",
+    description: "The measures used to protect information, accounts, devices, code and websites from loss, misuse and unauthorised access.",
+    lead: "This policy sets out how I protect information, including personal data, client material, accounts, devices, code and websites.",
+    summary:
+      "It describes the measures I use and the standards I work to. It is a statement of practice, not a guarantee that incidents cannot happen.",
+    related: ["security", "dataprotection", "retention", "aiuse"],
+    draftNote:
+      "Before publishing: check each measure described is actually in place (MFA, encryption, backups, device controls) and remove any that are not.",
+  },
+  photography: {
+    eyebrow: "Legal",
+    description: "When photographs, video and audio are taken, used and shared, and how consent works.",
+    lead: "This policy explains when I take, record, use and share photographs, video and audio, and how consent works.",
+    summary:
+      "Images or recordings of an identifiable person are personal data. I handle them with care, only with a lawful basis, and with extra care for children and young people.",
+    related: ["privacy", "dataprotection", "safeguarding", "mediaconsent"],
+    draftNote:
+      "Before publishing: decide the lawful basis for event photography (consent or legitimate interests) and make registration forms and venue signs match. This overlaps with the media consent policy, so decide whether to merge them.",
+  },
+  conditionsofsale: {
+    eyebrow: "Services",
+    description: "Conditions that apply when you buy services, digital products, subscriptions or other items.",
+    lead: "These conditions apply when you buy services, digital products, subscriptions or other items from me.",
+    summary:
+      "They cover making a contract, prices, delivery, your right to cancel, faulty items, liability and ending a contract. Nothing in them limits your statutory consumer rights.",
+    related: ["termsofservice", "cancellation", "payments", "subscriptions"],
+    draftNote:
+      "Before publishing: confirm governing law, list only the products you sell, and have a legal adviser review the cancellation, digital-content and liability wording.",
+  },
+  subscriptions: {
+    eyebrow: "Services",
+    description: "Terms for recurring plans that renew automatically until cancelled.",
+    lead: "These terms apply when you sign up for a recurring plan, such as paid access to a tool, API, resource library, membership or support plan.",
+    summary:
+      "Plans renew until you cancel. These terms explain trials, billing, price changes, cancelling, your content and data, and how the plan can be suspended or ended.",
+    related: ["conditionsofsale", "payments", "acceptableuse", "sla"],
+    draftNote:
+      "Before publishing: list the plans you actually offer (or hold this policy back), check the cooling-off wording against current subscription-contract rules, and state data export and retention after cancellation.",
+  },
+  sla: {
+    eyebrow: "Services",
+    description: "The service levels aimed for on paid, ongoing digital services such as hosted websites, tools and APIs.",
+    lead: "This agreement sets out the service levels I aim to meet for paid, ongoing digital services that a client has agreed to in writing.",
+    summary:
+      "It covers availability, maintenance, support response targets, security incidents, backups, your responsibilities and the remedies if a target is missed.",
+    related: ["conditionsofsale", "subscriptions", "informationsecurity", "security"],
+    draftNote:
+      "Before publishing: set only targets you can measure and meet in site.sla, and delete the reporting and recovery sections if you do not offer them.",
   },
 };

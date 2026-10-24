@@ -1,17 +1,26 @@
 ---
-slug: dataprotection
-title: Data protection policy
+slug: "dataprotection"
+group: "public"
+title: "Data protection policy"
+route: "/dataprotection/"
+status: "draft"
+version: "0.1.0"
+created: "2026-10-24"
+lastUpdated: "2026-10-24"
+lastReviewed: null
+reviewCadenceMonths: 12
+dependsOn: ["site"]
 ---
 
 ## Overview
 
 This policy explains how **{{site.controllerName}}** meets its obligations under the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018, and the standards I hold myself to when handling personal data.
 
-The [[Privacy notice]] tells you what personal data I collect, why, and what your rights are. This policy describes how I look after that data in practice. It applies to personal data I handle about website visitors, clients, learners and their parents or carers, event attendees, contributors, mailing-list subscribers and anyone else who contacts me.
+The [Privacy notice](/privacy/) tells you what personal data I collect, why, and what your rights are. This policy describes how I look after that data in practice. It applies to personal data I handle about website visitors, clients, learners and their parents or carers, event attendees, contributors, mailing-list subscribers and anyone else who contacts me.
 
 ## Who is responsible
 
-**{{site.controllerName}}** is the controller for the personal data described in the [[Privacy notice]]. For personal data that a client asks me to handle for their own purposes, I may instead act as a processor and will say so in our agreement.
+**{{site.controllerName}}** is the controller for the personal data described in the [Privacy notice](/privacy/). For personal data that a client asks me to handle for their own purposes, I may instead act as a processor and will say so in our agreement.
 
 {{site.dataProtection.icoRegistration}}
 
@@ -25,8 +34,8 @@ I handle personal data in line with the seven UK GDPR principles:
 - **Purpose limitation:** I collect data for specified, legitimate purposes and do not use it in ways that are incompatible with them
 - **Data minimisation:** I collect only what I need
 - **Accuracy:** I keep data accurate and correct it when I learn it is wrong
-- **Storage limitation:** I keep data no longer than necessary, as set out in the [[Data retention policy]]
-- **Integrity and confidentiality:** I protect data with appropriate security, as set out in the [[Information security policy]]
+- **Storage limitation:** I keep data no longer than necessary, as set out in the [Data retention policy](/retention/)
+- **Integrity and confidentiality:** I protect data with appropriate security, as set out in the [Information security policy](/informationsecurity/)
 - **Accountability:** I can show how I comply, and I keep records
 
 ## Lawful bases
@@ -45,9 +54,9 @@ The lawful basis for each purpose is recorded in the privacy notice and in my in
 
 Special category data, such as information about health, disability, ethnicity or religion, needs extra care. I collect it only where it is necessary, for example to make reasonable adjustments for a learner or attendee, and I rely on an appropriate Article 9 condition. I will not ask for it if I do not need it.
 
-Children’s data gets particular protection. For tutoring and safeguarding I work with parents or carers, collect the minimum, store records securely, and follow the [[Safeguarding policy]] and the [[Tutoring terms]]. I do not target children with marketing, and I do not profile them.
+Children’s data gets particular protection. For tutoring and safeguarding I work with parents or carers, collect the minimum, store records securely, and follow the [Safeguarding policy](/safeguarding/) and the [Tutoring terms](/tutoring/). I do not target children with marketing, and I do not profile them.
 
-Safeguarding information may need to be shared without consent where this is necessary to protect a child or adult at risk. This is explained in the [[Safeguarding policy]].
+Safeguarding information may need to be shared without consent where this is necessary to protect a child or adult at risk. This is explained in the [Safeguarding policy](/safeguarding/).
 
 ## Your rights
 
@@ -69,7 +78,7 @@ I use other organisations to help provide services, such as hosting, email, paym
 - Check where data is processed and whether transfers outside the UK have appropriate safeguards, such as an adequacy decision, the UK International Data Transfer Agreement or the UK Addendum to the EU Standard Contractual Clauses
 - Only share what the provider needs
 
-The [[Privacy notice]] lists the main categories of recipients. [[TODO: add a list of your current processors and where they process data, or say it is available on request]]
+The [Privacy notice](/privacy/) lists the main categories of recipients. [[TODO: add a list of your current processors and where they process data, or say it is available on request]]
 
 ## Privacy by design and risk assessments
 
@@ -89,7 +98,7 @@ If a breach happens, I will:
 4. Tell the people affected without undue delay if there is a high risk to them
 5. Record the breach, what I did and what I changed
 
-The wider response process is in the [[Information security policy]].
+The wider response process is in the [Information security policy](/informationsecurity/).
 
 ## Marketing and cookies
 
@@ -103,7 +112,7 @@ I keep this policy, the privacy notice and the retention schedule consistent wit
 
 ## Complaints
 
-If you have a concern about how I handle your personal data, contact {{site.privacyEmail | mailto}} first and I will try to put it right. See also the [[Complaints policy]].
+If you have a concern about how I handle your personal data, contact {{site.privacyEmail | mailto}} first and I will try to put it right. See also the [Complaints policy](/complaints/).
 
 You also have the right to complain to the Information Commissioner’s Office: [ico.org.uk/make-a-complaint](https://ico.org.uk/make-a-complaint/), or call 0303 123 1113.
 

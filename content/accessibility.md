@@ -153,7 +153,9 @@ Please contact me if:
 **{{site.controllerName}}**<br />
 {{site.contactEmail | mailto}}
 
-Other ways to give feedback: {{site.accessibility.otherFeedbackRoutes}}
+Other ways to give feedback:
+
+{{site.accessibility.otherFeedbackRoutes}}
 
 ### What to include
 
@@ -205,7 +207,10 @@ Automated testing is used as an aid rather than as proof of full accessibility. 
 
 - **Assessed by:** Self-assessment by {{site.controllerName}}
 - **Last tested:** {{site.accessibility.lastTested}}
-- **Tested combinations:** {{site.accessibility.testedCombinations}}
+
+**Tested combinations:**
+
+{{site.accessibility.testedCombinations}}
 
 ## Escalating a concern
 

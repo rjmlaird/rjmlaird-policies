@@ -1,80 +1,39 @@
-import type { PolicyEntry, PolicySlug } from "../schemas/policy";
+import { parse as parseYaml } from "yaml";
+import { PolicyEntrySchema, PolicySlugSchema, type PolicyEntry, type PolicySlug } from "../schemas/policy";
 
-const markdownFiles = import.meta.glob("./content/*.md", {
+const markdownFiles = import.meta.glob("../content/*.md", {
   query: "?raw",
   import: "default",
   eager: true,
 }) as Record<string, string>;
 
-function parseFrontmatter(raw: string): { data: Record<string, any> } {
-  const match = raw.match(/^---\s*([\s\S]*?)\s*---([\s\S]*)$/);
-  if (!match) return { data: {} };
-  
-  const yamlLines = match[1].split("\n");
-  const data: Record<string, any> = {};
-  let currentKey: string | null = null;
-  let currentArray: string[] | null = null;
-
-  for (const line of yamlLines) {
-    const trimmed = line.trim();
-    if (!trimmed || trimmed.startsWith("#")) continue;
-
-    if (trimmed.startsWith("- ") && currentKey) {
-      if (!currentArray) {
-        currentArray = [];
-        data[currentKey] = currentArray;
-      }
-      currentArray.push(trimmed.slice(2).trim().replace(/^['"]|['"]$/g, ""));
-      continue;
-    }
-
-    const colonIdx = trimmed.indexOf(":");
-    if (colonIdx !== -1) {
-      currentKey = trimmed.slice(0, colonIdx).trim();
-      let val = trimmed.slice(colonIdx + 1).trim();
-      currentArray = null;
-
-      if (val === "" || val === "|") continue;
-
-      if (val === "null" || val === "~" || val === "") {
-        data[currentKey] = null;
-      } else if (val === "true") {
-        data[currentKey] = true;
-      } else if (val === "false") {
-        data[currentKey] = false;
-      } else if (!isNaN(Number(val))) {
-        data[currentKey] = Number(val);
-      } else {
-        data[currentKey] = val.replace(/^['"]|['"]$/g, "");
-      }
-    }
+/** Parses the YAML frontmatter block with a real YAML parser (inline arrays, null, quoting all handled). */
+function parseFrontmatter(raw: string, file: string): Record<string, unknown> {
+  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---(?:\r?\n|$)/);
+  if (!match) return {};
+  try {
+    const data = parseYaml(match[1]!);
+    return data && typeof data === "object" ? (data as Record<string, unknown>) : {};
+  } catch (err) {
+    throw new Error(`Invalid YAML frontmatter in ${file}: ${(err as Error).message}`);
   }
-
-  return { data };
 }
 
 const entriesMap = new Map<string, PolicyEntry>();
 
 for (const [path, raw] of Object.entries(markdownFiles)) {
-  const { data } = parseFrontmatter(raw);
-  if (!data.slug) continue;
-  
-  const filename = path.split("/").pop() || `${data.slug}.md`;
+  const file = path.split("/").pop()!;
+  const data = parseFrontmatter(raw, file);
+  // Only `content/<slug>.md` is canonical. Anything else (unknown slug, or a second file claiming a slug,
+  // e.g. Photography___Video.md vs mediaconsent.md) is ignored here and reported by tests/policies.test.ts.
+  if (!PolicySlugSchema.safeParse(data.slug).success || file !== `${data.slug}.md`) continue;
 
-  entriesMap.set(data.slug, {
-    slug: data.slug as PolicySlug,
-    group: data.group || "public",
-    title: data.title,
-    route: data.route || `/${data.slug}/`,
-    status: data.status || "draft",
-    version: data.version || "0.1.0",
-    created: data.created || "2026-10-13",
-    lastUpdated: data.lastUpdated || data.created || "2026-10-13",
-    lastReviewed: data.lastReviewed !== undefined ? data.lastReviewed : null,
-    reviewCadenceMonths: data.reviewCadenceMonths ?? 12,
-    owner: data.owner || "Ryan J. M. Laird",
-    dependsOn: data.dependsOn,
-  });
+  // Validated strictly here so a typo in frontmatter fails loudly instead of defaulting silently.
+  const parsed = PolicyEntrySchema.safeParse({ ...data, contentFile: `content/${file}`, owner: data.owner ?? "Ryan J. M. Laird" });
+  if (!parsed.success) {
+    throw new Error(`Invalid frontmatter in ${file}: ${parsed.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join("; ")}`);
+  }
+  entriesMap.set(parsed.data.slug, parsed.data);
 }
 
 const slugOrder: PolicySlug[] = [
@@ -92,6 +51,14 @@ const slugOrder: PolicySlug[] = [
   "tutoring",
   "mediaconsent",
   "acceptableuse",
+  "aiuse",
+  "dataprotection",
+  "retention",
+  "informationsecurity",
+  "photography",
+  "conditionsofsale",
+  "subscriptions",
+  "sla",
 ];
 
 export const policyRegister: readonly PolicyEntry[] = slugOrder.map((slug) => {

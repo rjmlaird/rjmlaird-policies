@@ -3,11 +3,11 @@ slug: "termsofservice"
 group: "client"
 title: "Terms of service"
 route: "/termsofservice/"
-status: "published"
+status: "draft"
 version: "0.1.0"
 created: "2026-10-15"
 lastUpdated: "2026-10-15"
-lastReviewed: null,
+lastReviewed: null
 reviewCadenceMonths: 12
 dependsOn: ["site"]
 ---

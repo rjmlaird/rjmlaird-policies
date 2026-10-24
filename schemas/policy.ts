@@ -18,6 +18,15 @@ export const policySlugs = [
   "tutoring",
   "mediaconsent",
   "acceptableuse",
+  // Governance, data and commercial supplements (0.3.0)
+  "aiuse",
+  "dataprotection",
+  "retention",
+  "informationsecurity",
+  "photography",
+  "conditionsofsale",
+  "subscriptions",
+  "sla",
 ] as const;
 
 /** public = applies to anyone using the site; client = applies when someone books, pays or commissions work. */
@@ -72,9 +81,25 @@ export const PolicyEntrySchema = z
   });
 export type PolicyEntry = z.infer<typeof PolicyEntrySchema>;
 
-/** The only frontmatter content/*.md files carry. Dates, status and version live in the register. */
+/**
+ * Frontmatter carried by content/*.md. It is the source of truth for the register entry; `contentFile`
+ * is derived from the filename and `owner` defaults, so neither appears in frontmatter.
+ */
 export const PolicyFrontmatterSchema = z
-  .object({ slug: PolicySlugSchema, title: z.string().min(1) })
+  .object({
+    slug: PolicySlugSchema,
+    group: PolicyGroupSchema,
+    title: z.string().min(1),
+    route: z.string().regex(/^\/[a-z0-9-]+\/$/, "Expected /route/"),
+    status: PolicyStatusSchema,
+    version: z.string().regex(/^\d+\.\d+\.\d+$/),
+    created: IsoDateSchema,
+    lastUpdated: IsoDateSchema,
+    lastReviewed: IsoDateSchema.nullable(),
+    reviewCadenceMonths: z.number().int().min(1).max(36),
+    owner: z.string().min(1).optional(),
+    dependsOn: z.array(RegisterDependencySchema),
+  })
   .strict();
 export type PolicyFrontmatter = z.infer<typeof PolicyFrontmatterSchema>;
 

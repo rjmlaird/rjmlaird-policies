@@ -102,6 +102,23 @@ export const site = {
     recordsRetention: todo("how long safeguarding records are kept, consistent with the retention register"),
   },
 
+  /** Values referenced by content/dataprotection.md. */
+  dataProtection: {
+    icoRegistration: todo("state the ICO registration number, or that you have confirmed an exemption from the data protection fee"),
+  },
+
+  /** Values referenced by content/sla.md. Set only targets you can measure and meet. */
+  sla: {
+    availabilityTarget: todo("monthly availability target for paid hosted services, for example 99.5%"),
+    maintenanceNotice: todo("notice given before planned maintenance, for example 2 working days"),
+    supportHours: todo("support hours and days, and the time zone"),
+    criticalResponse: todo("first-response target for critical issues"),
+    highResponse: todo("first-response target for high-priority issues"),
+    normalResponse: todo("first-response target for normal issues"),
+    lowResponse: todo("first-response target for low-priority issues"),
+    creditTerms: todo("service credits or other remedy if the availability target is missed, or state that none apply"),
+  },
+
   /** Values referenced by content/complaints.md. */
   complaints: {
     acknowledgementDays: todo("business days to acknowledge a complaint, for example 3"),

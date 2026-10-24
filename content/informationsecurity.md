@@ -1,13 +1,22 @@
 ---
-slug: informationsecurity
-title: Information security policy
+slug: "informationsecurity"
+group: "public"
+title: "Information security policy"
+route: "/informationsecurity/"
+status: "draft"
+version: "0.1.0"
+created: "2026-10-24"
+lastUpdated: "2026-10-24"
+lastReviewed: null
+reviewCadenceMonths: 12
+dependsOn: ["site"]
 ---
 
 ## Overview
 
 This policy sets out how **{{site.controllerName}}** protects information, including personal data, client material, accounts, devices, code and websites, from loss, misuse and unauthorised access.
 
-It describes the measures I use and the standards I work to. It is a statement of practice, not a guarantee that incidents cannot happen. To report a vulnerability in a website or service, use the [[Security notice]]. For how personal data is handled, see the [[Data protection policy]].
+It describes the measures I use and the standards I work to. It is a statement of practice, not a guarantee that incidents cannot happen. To report a vulnerability in a website or service, use the [Security notice](/security/). For how personal data is handled, see the [Data protection policy](/dataprotection/).
 
 ## Scope
 
@@ -51,9 +60,9 @@ For the websites, tools and APIs I build, I aim to:
 - Keep dependencies up to date and review security advisories
 - Use HTTPS for all public services
 - Store secrets in the hosting platform’s secrets store or environment, not in source code
-- Limit what data tools collect and keep it only for as long as needed, as set out in the [[Data retention policy]]
+- Limit what data tools collect and keep it only for as long as needed, as set out in the [Data retention policy](/retention/)
 - Review code before release, test changes, and keep a way to roll back
-- Rate-limit and log access to APIs, as described in the [[Acceptable use policy]]
+- Rate-limit and log access to APIs, as described in the [Acceptable use policy](/acceptableuse/)
 
 I do not run security testing against systems I do not own or have permission to test.
 
@@ -63,7 +72,7 @@ I use encryption in transit (HTTPS/TLS) and encryption at rest for devices, back
 
 ## Backups and recovery
 
-I keep backups of important data, using separate copies on different storage, including one offsite. Backups are encrypted, access to them is limited, and restores are tested from time to time because a backup that has not been restored is unproven. Backups follow the retention approach in the [[Data retention policy]].
+I keep backups of important data, using separate copies on different storage, including one offsite. Backups are encrypted, access to them is limited, and restores are tested from time to time because a backup that has not been restored is unproven. Backups follow the retention approach in the [Data retention policy](/retention/).
 
 ## Suppliers and third-party services
 
@@ -74,18 +83,18 @@ I choose suppliers with reasonable security and privacy commitments, such as est
 - Its terms, including how it uses data and how I can export or delete it
 - Whether a contract or data-processing terms are needed
 
-Card payments are handled by a payment provider, and I do not see or store full card numbers. See the [[Payment policy]].
+Card payments are handled by a payment provider, and I do not see or store full card numbers. See the [Payment policy](/payments/).
 
 ## Sharing and communication
 
 - I share files through approved services with access limited to the people who need them, rather than by public links
 - I check the recipient before sending sensitive information, and I ask for a secure method where needed
 - I take care with phishing and impersonation: I verify unexpected requests for payment, credentials or information through a separate channel
-- I do not put passwords, API keys, personal records or client secrets into AI tools, tickets or public repositories. See the [[AI use policy]]
+- I do not put passwords, API keys, personal records or client secrets into AI tools, tickets or public repositories. See the [AI use policy](/aiuse/)
 
 ## Personal data and children’s information
 
-Personal data gets the controls above plus the commitments in the [[Data protection policy]]. Safeguarding records and information about learners are kept securely, accessed only by those who need them, and not shared except as set out in the [[Safeguarding policy]].
+Personal data gets the controls above plus the commitments in the [Data protection policy](/dataprotection/). Safeguarding records and information about learners are kept securely, accessed only by those who need them, and not shared except as set out in the [Safeguarding policy](/safeguarding/).
 
 ## Incidents
 
@@ -107,7 +116,7 @@ Where I work with subcontractors, collaborators or volunteers, I ask them to fol
 
 ## Reporting a concern
 
-If you believe your information has been exposed, or you have found a vulnerability, contact {{site.securityEmail | mailto}} and see the [[Security notice]]. For general concerns, contact {{site.contactEmail | mailto}}.
+If you believe your information has been exposed, or you have found a vulnerability, contact {{site.securityEmail | mailto}} and see the [Security notice](/security/). For general concerns, contact {{site.contactEmail | mailto}}.
 
 ## Changes to this policy
 

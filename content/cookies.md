@@ -7,7 +7,7 @@ status: "draft"
 version: "0.1.0"
 created: "2026-10-13"
 lastUpdated: "2026-10-13"
-lastReviewed: null,
+lastReviewed: null
 reviewCadenceMonths: 12
 dependsOn: ["site", "cookies"]
 ---

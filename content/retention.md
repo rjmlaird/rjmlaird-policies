@@ -1,13 +1,22 @@
 ---
-slug: retention
-title: Data retention policy
+slug: "retention"
+group: "public"
+title: "Data retention policy"
+route: "/retention/"
+status: "draft"
+version: "0.1.0"
+created: "2026-10-24"
+lastUpdated: "2026-10-24"
+lastReviewed: null
+reviewCadenceMonths: 12
+dependsOn: ["site"]
 ---
 
 ## Overview
 
 This policy explains how long **{{site.controllerName}}** keeps personal data and other records, how they are reviewed, and how they are deleted or anonymised when they are no longer needed.
 
-Keeping personal data for longer than necessary is a risk to the people it is about and a breach of the storage limitation principle in the UK GDPR. Deleting something I am legally required to keep is also a problem. This policy balances the two. It works with the [[Data protection policy]] and the [[Privacy notice]].
+Keeping personal data for longer than necessary is a risk to the people it is about and a breach of the storage limitation principle in the UK GDPR. Deleting something I am legally required to keep is also a problem. This policy balances the two. It works with the [Data protection policy](/dataprotection/) and the [Privacy notice](/privacy/).
 
 ## Principles
 
@@ -31,7 +40,7 @@ Keeping personal data for longer than necessary is a risk to the people it is ab
 | Safeguarding records | {{site.safeguarding.recordsRetention}} | To protect children and adults at risk, and to meet safeguarding duties |
 | Complaints and outcomes | 6 years after the complaint is closed | To show how complaints were handled and defend any claim |
 | Event registrations and attendance lists | 12 months after the event | To run the event and handle follow-up |
-| Photographs and recordings | As set in the [[Photography and media consent policy]] | To use them for the purpose consented to |
+| Photographs and recordings | As set in the [Photography and media consent policy](/mediaconsent/) | To use them for the purpose consented to |
 | Mailing-list subscriptions | Until you unsubscribe, plus a minimal record to honour opt-outs | To send what you asked for and respect your choice |
 | Consent and cookie-preference records | For as long as the consent is relied on, plus 6 years | To show that consent was given |
 | Website analytics | 14 months or less, or as set by the analytics provider | To understand how the site is used |
@@ -44,7 +53,7 @@ Where a record falls into more than one category, the longer period applies.
 
 ## Backups
 
-Deleted data may remain in backups for a limited time before the backup is overwritten or expires. I do not restore deleted personal data from a backup except to recover from an incident, and if I do, I delete it again promptly. See the [[Information security policy]].
+Deleted data may remain in backups for a limited time before the backup is overwritten or expires. I do not restore deleted personal data from a backup except to recover from an incident, and if I do, I delete it again promptly. See the [Information security policy](/informationsecurity/).
 
 ## Deletion and anonymisation
 
@@ -59,7 +68,7 @@ I review stored records at least once a year to make sure the schedule is follow
 
 ## Your requests
 
-You can ask me to delete your personal data. I will do so unless I have a legal reason to keep it, for example tax records or safeguarding duties. If I cannot delete something, I will explain why and when it will be deleted. To make a request, contact {{site.privacyEmail | mailto}}. See your rights in the [[Data protection policy]].
+You can ask me to delete your personal data. I will do so unless I have a legal reason to keep it, for example tax records or safeguarding duties. If I cannot delete something, I will explain why and when it will be deleted. To make a request, contact {{site.privacyEmail | mailto}}. See your rights in the [Data protection policy](/dataprotection/).
 
 ## Responsibility and review
 
