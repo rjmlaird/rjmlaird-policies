@@ -66,7 +66,6 @@ for (const [path, raw] of Object.entries(markdownFiles)) {
     group: data.group || "public",
     title: data.title,
     route: data.route || `/${data.slug}/`,
-    contentFile: `content/${filename}`,
     status: data.status || "draft",
     version: data.version || "0.1.0",
     created: data.created || "2026-10-13",
