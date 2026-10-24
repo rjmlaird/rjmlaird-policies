@@ -1,6 +1,15 @@
 ---
-slug: disclaimer
-title: Website disclaimer
+slug: "disclaimer"
+group: "public"
+title: "Website disclaimer"
+route: "/disclaimer/"
+status: "published"
+version: "0.1.1"
+created: "2026-10-13"
+lastUpdated: "2026-10-15"
+lastReviewed: "2026-10-13"
+reviewCadenceMonths: 12
+dependsOn: ["site"]
 ---
 
 ## Purpose of this disclaimer

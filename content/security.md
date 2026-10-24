@@ -1,6 +1,15 @@
 ---
-slug: security
-title: Security notice
+slug: "security"
+group: "public"
+title: "Security notice"
+route: "/security/"
+status: "draft"
+version: "0.1.0"
+created: "2026-10-13"
+lastUpdated: "2026-10-13"
+lastReviewed: null
+reviewCadenceMonths: 12
+dependsOn: ["site"]
 ---
 
 ## Overview

@@ -1,6 +1,15 @@
 ---
-slug: accessibility
-title: Accessibility statement
+slug: "accessibility"
+group: "public"
+title: "Accessibility statement"
+route: "/accessibility/"
+status: "published"
+version: "0.1.0"
+created: "2026-10-14"
+lastUpdated: "2026-10-14"
+lastReviewed: "2026-10-14"
+reviewCadenceMonths: 12
+dependsOn: ["site"]
 ---
 
 ## Our commitment

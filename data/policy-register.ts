@@ -1,224 +1,107 @@
 import type { PolicyEntry, PolicySlug } from "../schemas/policy";
 
-const owner = "Ryan J. M. Laird";
+const markdownFiles = import.meta.glob("./content/*.md", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+}) as Record<string, string>;
 
-/**
- * One entry per policy. This is the source of truth for dates, status, version and routes.
- * Content files carry only `slug` and `title` in frontmatter.
- * `created` for the first four is the earliest date known when the register was set up.
- */
-export const policyRegister: readonly PolicyEntry[] = [
-  {
-    slug: "privacy",
-    group: "public",
-    title: "Privacy notice",
-    route: "/privacy/",
-    contentFile: "content/privacy.md",
-    status: "draft",
-    version: "0.1.0",
-    created: "2026-10-13",
-    lastUpdated: "2026-10-13",
-    lastReviewed: null,
-    reviewCadenceMonths: 12,
-    owner,
-    dependsOn: ["site", "processors", "retention"],
-  },
-  {
-    slug: "cookies",
-    group: "public",
-    title: "Cookie notice",
-    route: "/cookies/",
-    contentFile: "content/cookies.md",
-    status: "draft",
-    version: "0.1.0",
-    created: "2026-10-13",
-    lastUpdated: "2026-10-13",
-    lastReviewed: null,
-    reviewCadenceMonths: 12,
-    owner,
-    dependsOn: ["site", "cookies"],
-  },
-  {
-    slug: "termsofuse",
-    group: "public",
-    title: "Terms of use",
-    route: "/termsofuse/",
-    contentFile: "content/termsofuse.md",
-    status: "published",
-    version: "0.1.0",
-    created: "2026-10-13",
-    lastUpdated: "2026-10-13",
-    lastReviewed: "2026-10-13",
-    reviewCadenceMonths: 12,
-    owner,
-    dependsOn: ["site"],
-  },
-  {
-    slug: "disclaimer",
-    group: "public",
-    title: "Website disclaimer",
-    route: "/disclaimer/",
-    contentFile: "content/disclaimer.md",
-    status: "published",
-    version: "0.1.1",
-    created: "2026-10-13",
-    lastUpdated: "2026-10-15",
-    lastReviewed: "2026-10-13",
-    reviewCadenceMonths: 12,
-    owner,
-    dependsOn: ["site"],
-  },
-  {
-    slug: "accessibility",
-    group: "public",
-    title: "Accessibility statement",
-    route: "/accessibility/",
-    contentFile: "content/accessibility.md",
-    status: "published",
-    version: "0.1.0",
-    created: "2026-10-14",
-    lastUpdated: "2026-10-14",
-    lastReviewed: "2026-10-14",
-    reviewCadenceMonths: 12,
-    owner,
-    dependsOn: ["site"],
-  },
-  {
-    slug: "security",
-    group: "public",
-    title: "Security notice",
-    route: "/security/",
-    contentFile: "content/security.md",
-    status: "draft",
-    version: "0.1.0",
-    created: "2026-10-13",
-    lastUpdated: "2026-10-13",
-    lastReviewed: null,
-    reviewCadenceMonths: 12,
-    owner,
-    dependsOn: ["site"],
-  },
-  {
-    slug: "safeguarding",
-    group: "public",
-    title: "Safeguarding policy",
-    route: "/safeguarding/",
-    contentFile: "content/safeguarding.md",
-    status: "draft",
-    version: "0.1.0",
-    created: "2026-10-15",
-    lastUpdated: "2026-10-15",
-    lastReviewed: null,
-    reviewCadenceMonths: 12,
-    owner,
-    dependsOn: ["site"],
-  },
-  {
-    slug: "complaints",
-    group: "public",
-    title: "Complaints policy",
-    route: "/complaints/",
-    contentFile: "content/complaints.md",
-    status: "draft",
-    version: "0.1.0",
-    created: "2026-10-15",
-    lastUpdated: "2026-10-15",
-    lastReviewed: null,
-    reviewCadenceMonths: 12,
-    owner,
-    dependsOn: ["site"],
-  },
-  {
-    slug: "termsofservice",
-    group: "client",
-    title: "Terms of service",
-    route: "/termsofservice/",
-    contentFile: "content/termsofservice.md",
-    status: "draft",
-    version: "0.1.0",
-    created: "2026-10-15",
-    lastUpdated: "2026-10-15",
-    lastReviewed: null,
-    reviewCadenceMonths: 12,
-    owner,
-    dependsOn: ["site"],
-  },
-  {
-    slug: "cancellation",
-    group: "client",
-    title: "Booking and cancellation policy",
-    route: "/cancellation/",
-    contentFile: "content/cancellation.md",
-    status: "draft",
-    version: "0.1.0",
-    created: "2026-10-15",
-    lastUpdated: "2026-10-15",
-    lastReviewed: null,
-    reviewCadenceMonths: 12,
-    owner,
-    dependsOn: ["site"],
-  },
-  {
-    slug: "payments",
-    group: "client",
-    title: "Payment and refund policy",
-    route: "/payments/",
-    contentFile: "content/payments.md",
-    status: "draft",
-    version: "0.1.0",
-    created: "2026-10-15",
-    lastUpdated: "2026-10-15",
-    lastReviewed: null,
-    reviewCadenceMonths: 12,
-    owner,
-    dependsOn: ["site"],
-  },
-  {
-    slug: "tutoring",
-    group: "client",
-    title: "Tutoring terms",
-    route: "/tutoring/",
-    contentFile: "content/tutoring.md",
-    status: "draft",
-    version: "0.1.0",
-    created: "2026-10-15",
-    lastUpdated: "2026-10-15",
-    lastReviewed: null,
-    reviewCadenceMonths: 12,
-    owner,
-    dependsOn: ["site"],
-  },
-  {
-    slug: "mediaconsent",
-    group: "client",
-    title: "Photography and media consent",
-    route: "/mediaconsent/",
-    contentFile: "content/mediaconsent.md",
-    status: "draft",
-    version: "0.1.0",
-    created: "2026-10-15",
-    lastUpdated: "2026-10-15",
-    lastReviewed: null,
-    reviewCadenceMonths: 12,
-    owner,
-    dependsOn: ["site"],
-  },
-  {
-    slug: "acceptableuse",
-    group: "client",
-    title: "Acceptable use policy",
-    route: "/acceptableuse/",
-    contentFile: "content/acceptableuse.md",
-    status: "draft",
-    version: "0.1.0",
-    created: "2026-10-15",
-    lastUpdated: "2026-10-15",
-    lastReviewed: null,
-    reviewCadenceMonths: 12,
-    owner,
-    dependsOn: ["site"],
-  },
+function parseFrontmatter(raw: string): { data: Record<string, any> } {
+  const match = raw.match(/^---\s*([\s\S]*?)\s*---([\s\S]*)$/);
+  if (!match) return { data: {} };
+  
+  const yamlLines = match[1].split("\n");
+  const data: Record<string, any> = {};
+  let currentKey: string | null = null;
+  let currentArray: string[] | null = null;
+
+  for (const line of yamlLines) {
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith("#")) continue;
+
+    if (trimmed.startsWith("- ") && currentKey) {
+      if (!currentArray) {
+        currentArray = [];
+        data[currentKey] = currentArray;
+      }
+      currentArray.push(trimmed.slice(2).trim().replace(/^['"]|['"]$/g, ""));
+      continue;
+    }
+
+    const colonIdx = trimmed.indexOf(":");
+    if (colonIdx !== -1) {
+      currentKey = trimmed.slice(0, colonIdx).trim();
+      let val = trimmed.slice(colonIdx + 1).trim();
+      currentArray = null;
+
+      if (val === "" || val === "|") continue;
+
+      if (val === "null" || val === "~" || val === "") {
+        data[currentKey] = null;
+      } else if (val === "true") {
+        data[currentKey] = true;
+      } else if (val === "false") {
+        data[currentKey] = false;
+      } else if (!isNaN(Number(val))) {
+        data[currentKey] = Number(val);
+      } else {
+        data[currentKey] = val.replace(/^['"]|['"]$/g, "");
+      }
+    }
+  }
+
+  return { data };
+}
+
+const entriesMap = new Map<string, PolicyEntry>();
+
+for (const [path, raw] of Object.entries(markdownFiles)) {
+  const { data } = parseFrontmatter(raw);
+  if (!data.slug) continue;
+  
+  const filename = path.split("/").pop() || `${data.slug}.md`;
+
+  entriesMap.set(data.slug, {
+    slug: data.slug as PolicySlug,
+    group: data.group || "public",
+    title: data.title,
+    route: data.route || `/${data.slug}/`,
+    contentFile: `content/${filename}`,
+    status: data.status || "draft",
+    version: data.version || "0.1.0",
+    created: data.created || "2026-10-13",
+    lastUpdated: data.lastUpdated || data.created || "2026-10-13",
+    lastReviewed: data.lastReviewed !== undefined ? data.lastReviewed : null,
+    reviewCadenceMonths: data.reviewCadenceMonths ?? 12,
+    owner: data.owner || "Ryan J. M. Laird",
+    dependsOn: data.dependsOn,
+  });
+}
+
+const slugOrder: PolicySlug[] = [
+  "privacy",
+  "cookies",
+  "termsofuse",
+  "disclaimer",
+  "accessibility",
+  "security",
+  "safeguarding",
+  "complaints",
+  "termsofservice",
+  "cancellation",
+  "payments",
+  "tutoring",
+  "mediaconsent",
+  "acceptableuse",
 ];
+
+export const policyRegister: readonly PolicyEntry[] = slugOrder.map((slug) => {
+  const entry = entriesMap.get(slug);
+  if (!entry) {
+    throw new Error(`Missing policy entry or markdown file for slug: ${slug}`);
+  }
+  return entry;
+});
 
 export function getPolicy(slug: PolicySlug): PolicyEntry {
   const entry = policyRegister.find((p) => p.slug === slug);

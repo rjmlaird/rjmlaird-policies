@@ -1,6 +1,15 @@
 ---
-slug: cookies
-title: Cookie notice
+slug: "cookies"
+group: "public"
+title: "Cookie notice"
+route: "/cookies/"
+status: "draft"
+version: "0.1.0"
+created: "2026-10-13"
+lastUpdated: "2026-10-13"
+lastReviewed: null,
+reviewCadenceMonths: 12
+dependsOn: ["site", "cookies"]
 ---
 
 ## Overview

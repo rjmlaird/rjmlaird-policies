@@ -1,6 +1,15 @@
 ---
-slug: payments
-title: Payment and refund policy
+    slug: "payments"
+    group: "client"
+    title: "Payment and refund policy"
+    route: "/payments/"
+    status: "draft"
+    version: "0.1.0"
+    created: "2026-10-15"
+    lastUpdated: "2026-10-15"
+    lastReviewed: null
+    reviewCadenceMonths: 12
+    dependsOn: ["site"],
 ---
 
 ## Overview

@@ -1,6 +1,15 @@
 ---
-slug: privacy
-title: Privacy notice
+slug: "privacy"
+group: "public"
+title: "Privacy notice"
+route: "/privacy/"
+status: "draft"
+version: "0.1.0"
+created: "2026-10-13"
+lastUpdated: "2026-10-13"
+lastReviewed: null
+reviewCadenceMonths: 12
+dependsOn: ["site", "processors", "retention"]
 ---
 
 ## Overview

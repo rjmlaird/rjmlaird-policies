@@ -1,6 +1,15 @@
 ---
-slug: termsofuse
-title: Terms of use
+slug: "termsofuse"
+group: "public"
+title: "Terms of use"
+route: "/termsofuse/"
+status: "published"
+version: "0.1.0"
+created: "2026-10-13"
+lastUpdated: "2026-10-13"
+lastReviewed: "2026-10-13"
+reviewCadenceMonths: 12
+dependsOn: ["site"]
 ---
 
 ## About these terms

@@ -1,6 +1,15 @@
 ---
-slug: complaints
-title: Complaints policy
+slug: "complaints"
+group: "public"
+title: "Complaints policy"
+route: "/complaints/"
+status: "draft"
+version: "0.1.0"
+created: "2026-10-15"
+lastUpdated: "2026-10-15"
+lastReviewed: null
+reviewCadenceMonths: 12
+dependsOn: ["site"]
 ---
 
 ## Overview

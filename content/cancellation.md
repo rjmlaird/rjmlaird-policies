@@ -1,6 +1,16 @@
 ---
-slug: cancellation
-title: Booking and cancellation policy
+slug: "cancellation"
+group: "client"
+title: "Booking and cancellation policy"
+route: "/cancellation/"
+contentFile: "content/cancellation.md"
+status: "draft"
+version: "0.1.0"
+created: "2026-10-15"
+lastUpdated: "2026-10-15"
+lastReviewed: null,
+reviewCadenceMonths: 12
+dependsOn: ["site"]
 ---
 
 ## Overview
